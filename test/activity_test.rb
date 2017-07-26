@@ -47,4 +47,31 @@ class ActivityTest < Minitest::Test
 
     assert_equal ({"Jim" => 20, "Joe" => 40}), activity.participants
   end
+
+  def test_its_total_cost_with_more_than_one_participant
+    activity = Activity.new("Brunch")
+
+    activity.add_participant("Jim", 20)
+    activity.add_participant("Joe", 40)
+
+    assert_equal 60, activity.total_cost
+  end
+
+  def test_it_can_split
+    activity = Activity.new("Brunch")
+
+    activity.add_participant("Jim", 20)
+    activity.add_participant("Joe", 40)
+
+    assert_equal 30, activity.split
+  end
+
+  def test_it_can_calculate_who_owes_what
+    activity = Activity.new("Brunch")
+
+    activity.add_participant("Jim", 20)
+    activity.add_participant("Joe", 40)
+
+    assert_equal ({"Jim" => 10, "Joe" => -10}), activity.owed
+  end
 end

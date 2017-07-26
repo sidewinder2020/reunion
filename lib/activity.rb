@@ -19,4 +19,13 @@ attr_reader :name, :participants
     total
   end
 
+  def split
+    total = total_cost
+    each_pay = total / @participants.count
+  end
+
+  def owed
+
+  end
+
 end
