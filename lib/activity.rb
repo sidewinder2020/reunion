@@ -1,3 +1,4 @@
+require './lib/reunion'
 require 'pry'
 
 class Activity
