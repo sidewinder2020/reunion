@@ -24,8 +24,14 @@ attr_reader :name, :participants
     each_pay = total / @participants.count
   end
 
-  def owed
-
-  end
+  # def owed
+  #   split_total = split
+  #   binding.pry
+  #     @participants.values.map do |amnt_owed|
+  #     indv_amnt_owed = split_total - amnt_owed
+  #     @participants.values # throw the ind amnt in there
+  #   end
+  #   indv_amnt_owed
+  # end
 
 end

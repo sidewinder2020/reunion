@@ -66,12 +66,12 @@ class ActivityTest < Minitest::Test
     assert_equal 30, activity.split
   end
 
-  def test_it_can_calculate_who_owes_what
-    activity = Activity.new("Brunch")
-
-    activity.add_participant("Jim", 20)
-    activity.add_participant("Joe", 40)
-
-    assert_equal ({"Jim" => 10, "Joe" => -10}), activity.owed
-  end
+  # def test_it_can_calculate_who_owes_what
+  #   activity = Activity.new("Brunch")
+  #
+  #   activity.add_participant("Jim", 20)
+  #   activity.add_participant("Joe", 40)
+  #
+  #   assert_equal ({"Jim" => 10, "Joe" => -10}), activity.owed
+  # end
 end
