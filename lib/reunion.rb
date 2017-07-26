@@ -9,8 +9,15 @@ attr_reader :name, :activities
   end
 
   def add_activity(activity_name)
-    binding.pry
     @activities << activity_name
+  end
+
+  def total_cost
+    #bring activities method down to access obj info
+    total = @participants.values.reduce do |sum, cost|
+      sum += cost
+    end
+    total
   end
 
 end
